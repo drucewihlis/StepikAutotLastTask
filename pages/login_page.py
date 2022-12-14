@@ -11,7 +11,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        assert EC.url_contains('login'), 'Wrong url'
+        assert 'login' in self.browser.current_url
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
