@@ -10,7 +10,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     BTN_ADD_TO_BASKET = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    NOTIFY_ADDED_TO_BASKET = (By.CSS_SELECTOR, "#messages .alert:nth-child(1)")
-    NOTIFY_BASKET_TOTAL = (By.CSS_SELECTOR, "#messages .alert:nth-child(3)")
+    NOTIFY_ADDED_TO_BASKET = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) strong")
+    NOTIFY_BASKET_TOTAL = (By.CSS_SELECTOR, "#messages .alert:nth-child(3) p strong")
     BOOK_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     BOOK_NAME = (By.CSS_SELECTOR, ".product_main h1")
