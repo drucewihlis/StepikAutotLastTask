@@ -13,3 +13,4 @@ class ProductPageLocators():
     NOTIFY_ADDED_TO_BASKET = (By.CSS_SELECTOR, "#messages .alert:nth-child(1)")
     NOTIFY_BASKET_TOTAL = (By.CSS_SELECTOR, "#messages .alert:nth-child(3)")
     BOOK_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+    BOOK_NAME = (By.CSS_SELECTOR, ".product_main h1")

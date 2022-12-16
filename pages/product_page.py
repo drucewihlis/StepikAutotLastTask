@@ -10,9 +10,10 @@ class ProductPage(BasePage):
         btn_add_to_basket.click()
 
     def should_be_bookname_in_notify(self, browser):
+        book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME).text
         WebDriverWait(browser, 5).until(
-            EC.text_to_be_present_in_element((ProductPageLocators.NOTIFY_ADDED_TO_BASKET), "The shellcoder's handbook"))
-        assert "The shellcoder's handbook" in self.browser.find_element(*ProductPageLocators.NOTIFY_ADDED_TO_BASKET).text
+            EC.text_to_be_present_in_element((ProductPageLocators.NOTIFY_ADDED_TO_BASKET), book_name))
+        assert book_name in self.browser.find_element(*ProductPageLocators.NOTIFY_ADDED_TO_BASKET).text
 
     def should_be_price_in_notify(self, browser):
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
