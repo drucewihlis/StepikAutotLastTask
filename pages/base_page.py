@@ -33,6 +33,7 @@ class BasePage():
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
+
         return True
 
     def solve_quiz_and_get_code(self):
